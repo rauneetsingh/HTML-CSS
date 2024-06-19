@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+        .bg-blue {
+            background-color: blue;
+        }
+
+        .bg-white {
+            background-color: white;
+        }
+
+        .bg-orange {
+            background-color: orange;
+        }
+
+        @keyframes loading {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0px 0px 0px 0px orange, 0px 0px 0px 0px green, 0px 0px 0px 0px rebeccapurple;
+            }
+
+            100% {
+                box-shadow: 0px 0px 0px 20px rgba(255, 166, 0, 0), 0px 0px 0px 40px rgba(0, 128, 0, 0), 0px 0px 0px 60px rgba(102, 51, 153, 0);
+            }
+        }
+
+        .loading-box {
+            height: 10px;
+            width: 50%;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .loading-bar {
+            background-color: red;
+            width: 30%;
+            height: 10px;
+            border-radius: 5px;
+            animation-name: loading;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+        }
+
+        .pulse-box {
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            border-radius: 50%;
+            margin-top: 100px;
+        }
+
+        .pulse-box:hover {
+            animation-name: pulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Loading</h2>
+    <div class="loading-box bg-black">
+        <div class="loading-bar"></div>
+    </div>
+
+    <div class="pulse-box bg-orange"></div>
+    
+</body>
+
+</html>
